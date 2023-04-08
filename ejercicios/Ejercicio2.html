@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+
+        <fieldset>
+            <legend>Informacion personal</legend>
+            <div>
+                <label for="nameInput">Nombre: </label>
+                <input type="text" name="userInput" id="nameInput" placeholder="Elon">
+                <label for="lastnameInput">Apellido: </label>
+                <input type="text" name="userInput" id="lastnameInput" placeholder="Musk">
+            </div>
+            <br>
+            <div>
+                <label for="ageInput">Edad: </label>
+                <input id="ageInput" name="ageInput" value="40" type="number" min="0" max="120" input type="date">
+            </div>
+            <br>
+            <div>
+                <label for="emailInput">Edad: </label>
+                <input id="emailInput" name="emailInput" type="email" placeholder="nombre@email.com">
+            </div>
+            <br>
+            <div>
+                <label for="passwordlInput">password: </label>
+                <input id="passwordlInput" name="passwordlInput" type="password" placeholder="********">
+            </div>
+            <br>
+            <fieldset>
+                    <legend>Género</legend>
+                <div>
+                    <input type="radio" name="sexInput" id="famele">
+                    <label for="famele">Mujer</label>
+                </div>
+                <div>
+                    <input type="radio" name="sexInput" id="male">
+                    <label for="male">Hombre</label>
+                </div>
+                <div>
+                    <input type="radio" name="sexInput" id="other">
+                    <label for="other">Otro</label>
+                </div>
+            </fieldset>
+            <br>
+            <div>
+                <label for="countryInput">Pais: </label>
+                <input type="text" name="countryInput" id="countryInput" placeholder="Introduce tu pais">
+            </div>
+            <br>
+            <div class="inputForm">
+                <label for="lenguageInput">lenguaje de programación: </label>
+                <select name="lenguageInput" id="lenguageInput">
+                    <option value="javascript">Javascript</option>
+                    <option value="python">Python</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="sql">SQL</option>
+                </select>
+            </div>
+            <br>
+            <fieldset disabled>
+                <legend>Selecciona tu academia de programacion favorita</legend>
+                <div>
+                    <input type="radio" name="academyInput" id="academyInput" checked>
+                    <label for="code space academy">Code Space Academy</label>
+                </div>
+                <div>
+                    <input type="radio" name="academyInput" id="academyInput">
+                    <label for="academia 2">Academia 2</label>
+                </div>
+                <div>
+                    <input type="radio" name="academyInput" id="academyInput">
+                    <label for="academia 3">Academia 3</label>
+                </div>
+            </fieldset>
+        </fieldset>
+        <br>
+    <div>
+        <input type="checkbox" name="promocionMailAgree">
+        <label for="promocionMailAgree">Acepta recibir cientros de miles de correos irrelevantes.</label>
+    </div>
+    <div>
+        <input type="checkbox" name="TermAndConditionslAgree">
+        <label for="TermAndConditionAgree">Acepta los términos y condiciones.</label>
+    </div>
+    <br>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Vaciar formulario">
+    </form>
+</body>
+</html>
