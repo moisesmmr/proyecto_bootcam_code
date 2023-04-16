@@ -1,0 +1,71 @@
+/* Posicionamiento flotante: divs dentro de otros divs*/
+.pos-float-parent {
+    border: 5px solid royalblue;
+}
+
+.pos-float-child-1 {
+    background-color: brown;
+    height: 100px;
+    width: 33.3%;
+    float: left;
+}
+
+.pos-float-child-2 {
+    background-color: darkblue;
+    height: 100px;
+    width: 33.3%;
+    float: left;
+}
+
+.pos-float-child-3 {
+    background-color: darkorange;
+    height: 100px;
+    width: 33.3%;
+    float: left;
+}
+
+.pos-float-child-4 {
+    background-color: yellowgreen;
+    height: 50px;
+    width: 100%;
+    /*crea una linea nueva*/
+    clear: both;
+}
+
+/*Overflow - Gestuib del desbirdamiento del contenido */
+[class^="overflow-parent"] {
+    width: 200px;
+    height: 100px;
+    border: 3px dashed black;
+    margin-bottom: 150px;
+}
+
+.overflow-parent-1 {
+    overflow: hidden;
+}
+
+.overflow-parent-2 {
+    overflow: visible;
+}
+
+.overflow-parent-3 {
+    overflow: scroll;
+}
+
+/*tamaño de las cajas (box-sizing)*/
+.box-sizing-parent {
+    width: 200px;
+    height: 200px;
+    border: 10px solid goldenrod;
+}
+.box-sizing-child {
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    border: 10px solid darkgreen;
+}
+.border-box {
+    margin-top: 10px;
+    /*linea para que el borde de la caja respere al receptor*/
+    box-sizing: border-box;
+}
