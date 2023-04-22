@@ -1,0 +1,65 @@
+
+/*general*/
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid gray;
+    padding: 10px;
+}
+ /*header*/
+header {
+    margin-bottom: 20px;
+}
+
+.top-banner {
+    position: relative;
+}
+
+.top-banner form {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -12px;
+}
+
+/*aside*/
+.news > a, .news span {
+    display: block;
+}
+
+aside {
+    float: left;
+    width: 25%;
+}
+
+/*contenido central*/
+section {
+    float: right;
+    width: 73%;
+}
+
+.main-content {
+    float: left;
+    width: 75%;
+}
+
+.side-content {
+    float: right;
+    width: 25%;
+}
+
+.main-content img {
+    float: left;
+    margin-right: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+/*footer*/
+footer {
+    margin-top: 20px;
+}
