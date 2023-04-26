@@ -1,0 +1,38 @@
+ol {
+    list-style: none;
+    background-color: rgb(1, 1, 112);
+    color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+ol>li {
+    display: inline;
+    display: grid;
+    place-items: center;
+    margin-right: 20%;
+    
+}
+
+.if_mobile_display_none {
+    display: none;
+    position: absolute;
+}
+
+@media only screen and (min-width: 758px) {
+    .if_mobile_display_none {
+        display: inline-block;
+        margin: 0px;
+        margin-left: 8%;
+        
+    }
+}
+
+@media only screen and (min-width: 758px) {
+    ol>li {
+        display: inline;
+        margin: 8%;
+    }
+    }
+
+
