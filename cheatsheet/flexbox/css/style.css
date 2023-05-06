@@ -1,0 +1,30 @@
+.flex-parent {
+    display: flex;
+    height: 300px;
+    flex-direction: row; /*   row (default) / columna*/
+    flex-wrap: nowrap; /*si no cabe el elmento lo mueve abajo*/
+    justify-content: center; /*centro el contenido del padre*/
+    /*justify-content: space-around; reparete el contenido dejando espacios*/
+}
+
+[class^="flex-child"] {
+    width: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-parent > div:nth-child(odd) {
+    background-color: brown;
+    color: 333;
+}
+
+.flex-parent > div:nth-child(even) {
+    background-color: rgb(200, 255, 3);
+    color: 333;
+}
+
+.flex-child-2 {
+    flex-shrink: 3; /*mientras nowrap padre este child decrece mas rapido*/
+}

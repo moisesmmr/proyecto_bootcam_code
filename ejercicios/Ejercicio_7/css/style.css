@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(2, 162, 255);
+    display: flex;
+    padding-top: 7%;
+    align-items: center;
+    justify-content: center;
+}
+
+.perimetro {
+    background-color: rgb(255, 255, 255);
+    width: 340px;
+    height: 780px;
+    border-radius: 3%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.renglones {
+    margin: 15px;
+    border-radius: 15px;
+    display: flex;
+    background-color: grey;
+    height: 300px;
+    width: 310px;
+    justify-content: center;
+    align-items: center;
+}
+
+div>ol {
+
+    padding: 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    justify-content: space-between;
+    border: 15px;
+    list-style: none;
+    background-color: beige;
+    height: 33px;
+    width: 250px;
+}
+
+.logo {
+    justify-content: first baseline;
+}
+
+footer {
+    border-radius: 15px;
+    margin: 15px;
+    
+    background-color: rgb(158, 157, 157);
+    height: 300px;
+    width: 310px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    
+}
+
+.criculo .foot {
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer {
+    
+}
