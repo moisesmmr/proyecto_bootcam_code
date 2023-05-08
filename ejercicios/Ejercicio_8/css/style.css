@@ -1,0 +1,37 @@
+.father-div {
+    gap: 10px;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    
+    grid-template-areas: "header header"
+                        "content1 content2"
+                        "content1 content2"
+                        "content1 content3"
+                        "footer footer";
+}
+
+.father-div > .div-child-1 {
+    grid-area: header;
+    background-color: aqua;
+}
+
+.father-div > .div-child-2 {
+    grid-area: content1;
+
+    background-color: blueviolet;
+}
+
+.father-div > .div-child-3 {
+    grid-area: content2;
+    background-color: rgb(207, 205, 86);
+}
+.father-div > .div-child-4 {
+    
+    grid-area: content3;
+    background-color: rgb(106, 243, 72);
+}
+
+.father-div > .div-child-5 {
+    grid-area: footer;
+    background-color: rgb(86, 101, 238);
+}
