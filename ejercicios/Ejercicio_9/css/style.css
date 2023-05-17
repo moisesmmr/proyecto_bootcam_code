@@ -5,9 +5,12 @@ body {
 }
 
 [class^=caja] {
+    justify-content: space-around;
     background-color: blue;
     height: 50px;
     width: 50px;
+    opacity: 0;
+    animation: aparece 2s ease 0.5s 1 normal forwards;
 }
 
 .padre {
@@ -22,9 +25,7 @@ body {
 }
 
 .transition {
-    transition-duration: 0.4s;
     transition-timing-function: ease-in-out;
-    transition-delay: 0.2s;
     cursor: pointer;
 }
 
@@ -32,3 +33,24 @@ body {
     scale: 1.2;
 }
 
+.caja1 {animation-delay: 0.5s;}
+.caja2 {animation-delay: 1s;}
+.caja3 {animation-delay: 1.5s;}
+.caja4 {animation-delay: 2s;}
+.caja5 {animation-delay: 2.5s;}
+.caja6 {animation-delay: 3s;}
+.caja7 {animation-delay: 3.5s;}
+.caja8 {animation-delay: 4s;}
+.caja9 {animation-delay: 4.5s;}
+.caja10 {animation-delay: 5s;}
+.caja11 {animation-delay: 5.5s;}
+.caja12 {animation-delay: 6s;}
+.caja13 {animation-delay: 6.5s;}
+.caja14 {animation-delay: 7s;}
+.caja15 {animation-delay: 7.5s;}
+.caja16 {animation-delay: 8s;}
+
+@keyframes aparece {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

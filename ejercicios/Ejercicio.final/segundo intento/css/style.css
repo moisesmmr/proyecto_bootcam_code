@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(235, 235, 235, 0.712);
+}
+
+.login-page {
+    margin: 25px;
+    border-radius: 5px;
+    background-color: rgb(253, 253, 253);
+    display: grid;
+}
+
+.header-img>img {
+    display: flex;
+    height: 110px;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.login-page input {
+    width: 90%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+.nucleo {
+    margin-left: 20px;
+}
+
+.line {
+    height: 1px;
+    background-color: rgba(87, 86, 86, 0.486);
+    margin-bottom: 5px;
+    margin-top: 15px;
+    width: 90%;
+}
+
+.nucleo>h5 {
+    margin-bottom: 5px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+#log-in {
+    background-color: rgb(123, 9, 230);
+    color: white;
+    font-weight: bold;
+    border: 0;
+}
+
+.links {
+    display: grid;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.links a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: rgb(143, 34, 245);
+    font-weight: bold;
+    font-size:smaller;
+}
+
+#github-input {
+    background-color: white;
+    border: rgba(0, 0, 0, 0.329) 1px solid;
+}
+
+#twiter-input {
+    background-color: white;
+    border: rgba(0, 0, 0, 0.329) 1px solid;
+}
