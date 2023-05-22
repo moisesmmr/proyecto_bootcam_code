@@ -18,7 +18,7 @@ body {
     border-top-right-radius: 5px;
 }
 
-.login-page input {
+.login-page input, button {
     width: 90%;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -66,12 +66,37 @@ body {
     font-size:smaller;
 }
 
-#github-input {
+button {
     background-color: white;
-    border: rgba(0, 0, 0, 0.329) 1px solid;
 }
 
-#twiter-input {
-    background-color: white;
-    border: rgba(0, 0, 0, 0.329) 1px solid;
+@media only screen and (min-width: 540px) {
+    .login-page {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column: 1fr; 
+        padding: 80px;
+    }
+
+    .header-img>img {
+        height: 500px;
+    }
+
+    .nucleo {
+        display: grid;
+        align-items: space-between;
+    }
+
+    .nucleo>h3 {
+        font-size: xx-large;
+        margin-bottom: 0;      
+    }
+ 
 }
+
+
+
+/*1-Queda por hacer sombreado de la caja contenedora para destacar el contenido
+    2-al incluir los iconos twitter y github cambia el font-style, corregir.
+    3-Cada vez que se guarda el archivo "login.html" la media quieri deja de funcionar
+*/
