@@ -1,8 +1,8 @@
 //-----------------------------Uso externo JS-------------
-function saludo () {
+function saludo() {
     alert("Hola desde un script externo")
 }
-document.getElementsByTagName("a").item(2).addEventListener("click", saludo);
+/*document.getElementsByTagName("a").item(2).addEventListener("click", saludo);*/
 
 //-----------------------------Depuracion - loggin------------
 //alert ("Mensaje");
@@ -15,8 +15,8 @@ console.log("Mensaje");
 function saludar() {
     let contador;
     console.log("Inicial: ", contador);
- 
-    for (let contador = 0; contador < 3; contador ++ ) {
+
+    for (let contador = 0; contador < 3; contador++) {
         console.log(contador);
     }
     console.log("Final: ", contador);
@@ -28,7 +28,7 @@ console.clear();
 
 //inicializacion
 let day;
-day=5;
+day = 5;
 
 let month = 10;
 
@@ -84,11 +84,11 @@ console.log(str.substring(1, 3));
 
 console.log("Hola mundo".concat(". Adios mundo."));
 console.log("Hola mundo" + ". Adios Mundo");
-str=str + ". Adios Mundo";
+str = str + ". Adios Mundo";
 str += ". Adios Mundo";
 console.log(str);
 
-console.log(str.replace ("Mundo", "futuro"));
+console.log(str.replace("Mundo", "futuro"));
 console.log(str.replaceAll("Mundo", "futuro"));
 console.log(str.toLowerCase());
 console.log(str.toUpperCase());
@@ -106,14 +106,14 @@ console.log(number, typeof number);
 number += "1000";//Entiende que es una concatenacion, no una suma.
 console.log(number, typeof number);
 
-console.log("1" +1, "1" - 1); //Peculiaridad js
+console.log("1" + 1, "1" - 1); //Peculiaridad js
 
 //---------------Object------------
 let person = {
     name: "john",
-    age : 30,
-    blonde : false,
-    jump () {
+    age: 30,
+    blonde: false,
+    jump() {
         console.log("Hey, estoy saltando");
     }
 }
@@ -136,3 +136,82 @@ person.children = ["Marta", "Piter"]; //nueva cualidad
 console.log(person);
 
 person.jump()
+
+// This
+const person2 = {
+    name: "Thomas",
+    talk() {
+        console.log(`Me llamo ${this.name}`);
+    }
+}
+
+person2.talk();
+
+console.clear();
+//-------------------Object
+let selectedColors = ["red", "blue"]; // Array de string
+console.log(selectedColors, selectedColors.length, typeof selectedColors);
+
+selectedColors[2] = "green";
+console.log(selectedColors, selectedColors.length);//agrega elemento
+
+selectedColors.push("violet");
+console.log(selectedColors, selectedColors.length); //agrega elemento
+
+selectedColors.pop();
+console.log(selectedColors, selectedColors.length);//elimina elemento
+
+selectedColors.unshift("white");
+console.log(selectedColors, selectedColors.length);//agregar al unicio
+
+selectedColors.shift();
+console.log(selectedColors, selectedColors.length);//elimina el unicio
+
+selectedColors.sort();
+console.log(selectedColors, selectedColors.length);//Ordena
+
+console.log(selectedColors.indexOf("red"));//busca y devuelve indice
+
+console.log(selectedColors.slice(1, 3));//devuelve un rango, exclulle el final
+console.log(selectedColors);
+
+console.log(selectedColors.splice(1, 3));//elemina un rango
+console.log(selectedColors);
+
+/* Crear un objeto 'niño' que tenga las propiedades nombre, altura, genero y amigoS. 
+Amigos estara inicialmente vacio y añadiremos posterioremente 3 elementos con los 
+nombres.*/
+
+
+let niño = {
+    nombre : "juan",
+    altura : "1.7m",
+    genero : "masculino",
+    amigoS : [],
+    perderAmigo() {
+        this.amigoS.pop();
+    }
+}
+
+console.log(niño);
+
+niño.amigoS.push("laura", "luis", "carlos");
+
+console.log(niño);
+
+niño.perderAmigo();
+
+console.log(niño);
+
+//----------------- Condicionales
+
+const randomNumber = 9;
+const guessedNumber = "5";
+
+if (randomNumber == guessedNumber) {
+    console.log("Has acertado el número");
+} else if(randomNumber > guessedNumber) {
+    console.log("El número secreto es mayor");
+} else() {
+    console.log("El número secreto es menor");
+}
