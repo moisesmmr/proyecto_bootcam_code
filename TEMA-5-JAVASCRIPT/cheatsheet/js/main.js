@@ -187,6 +187,7 @@ let niño = {
     nombre : "juan",
     altura : "1.7m",
     genero : "masculino",
+    blonde = false,
     amigoS : [],
     perderAmigo() {
         this.amigoS.pop();
@@ -205,13 +206,92 @@ console.log(niño);
 
 //----------------- Condicionales
 
-const randomNumber = 9;
-const guessedNumber = "5";
+// const randomNumber = 9;
+// const guessedNumber = "5";
 
-if (randomNumber == guessedNumber) {
-    console.log("Has acertado el número");
-} else if(randomNumber > guessedNumber) {
-    console.log("El número secreto es mayor");
-} else() {
-    console.log("El número secreto es menor");
+// if (randomNumber == guessedNumber) {
+//     console.log("Has acertado el número");
+// } else if(randomNumber > guessedNumber) {
+//     console.log("El número secreto es mayor");
+// } else {
+//     console.log("El número secreto es menor");
+// }
+
+//Ternari operator
+let person = {
+    name: "Moisés",
+    age: 31,
+    blonde: false,
+    presentarse() {
+        console.log(`hola soy ${this.name}, tengo ${this.age}, y ${this.blonde ? "soy rubio" : "no soy rubio"}`)
+    }
 }
+
+person.presentarse();
+
+//switch
+let option = 3;
+switch (option) {
+    case 1:
+        // Bloque de codigo para el valor 1
+        console.log("Option vale 1");
+        break;
+    case 2:
+        // Bloque de codigo para el valor 1
+        console.log("Option vale 2");
+        break;
+    case 3:
+        // Bloque de codigo para el valor 1
+        console.log("Option vale 3");
+        break;
+    default:
+        // "De otro modo" de pseint
+        console.log("otra opcion");
+        break;
+}
+console.clear();
+//----------------------Funciones/Fuctions----------------
+
+//Nombradas
+function greet(name, lastName) {
+    return `Hola, ${name} ${lastName}. ¿Que tal?`;
+}
+
+console.log(greet("Marcos", "Aurelio"));
+// greet("Marcos", "Aurelio");
+
+// Que devuelva el cuadrado de un numero que recibe por parametro
+function square(number) {
+    let square = number * number;
+    return square;
+}
+
+console.log(square(5));
+
+//Anonimas
+let numbersArray = [5, 51, 1, 15, 2];
+console.log(numbersArray);
+numbersArray.sort(); //Ordena por ASCII
+console.log(numbersArray);
+
+
+function orderNumbers (a, b) { //Para ordenar numeros por su valor
+    if (a < b) {
+        return -1;
+    } else if (a === b) {
+        return 0;
+    } else {
+        return 1;
+    }
+}
+
+numbersArray.sort(function (a, b) {return a - b}); //Lo escrito en esta linea y en la linea 292 es igual, para esta opcion se obvia la fincion en linea 278.
+
+// numbersArray.sort(orderNumbers);
+
+console.log(numbersArray);
+
+// Arrow Functions
+const perimeterOfSquare = (side) => side*4;
+
+console.log(perimeterOfSquare(5));
