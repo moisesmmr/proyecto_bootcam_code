@@ -109,14 +109,14 @@ console.log(number, typeof number);
 console.log("1" + 1, "1" - 1); //Peculiaridad js
 
 //---------------Object------------
-let person = {
+person = {
     name: "john",
     age: 30,
     blonde: false,
     jump() {
-        console.log("Hey, estoy saltando");
+        console.log("Hey, estoy saltando")
     }
-}
+};
 
 //Acceso por punto / Dot natation
 console.log(typeof person, person);
@@ -187,7 +187,7 @@ let niño = {
     nombre : "juan",
     altura : "1.7m",
     genero : "masculino",
-    blonde = false,
+    blonde : false,
     amigoS : [],
     perderAmigo() {
         this.amigoS.pop();
@@ -218,16 +218,16 @@ console.log(niño);
 // }
 
 //Ternari operator
-let person = {
-    name: "Moisés",
-    age: 31,
-    blonde: false,
-    presentarse() {
-        console.log(`hola soy ${this.name}, tengo ${this.age}, y ${this.blonde ? "soy rubio" : "no soy rubio"}`)
-    }
-}
+// let person = {
+//     name: "Moisés",
+//     age: 31,
+//     blonde: false,
+//     presentarse() {
+//         console.log(`hola soy ${this.name}, tengo ${this.age}, y ${this.blonde ? "soy rubio" : "no soy rubio"}`);
+//     }
+// }
 
-person.presentarse();
+// person.presentarse();
 
 //switch
 let option = 3;
@@ -295,3 +295,97 @@ console.log(numbersArray);
 const perimeterOfSquare = (side) => side*4;
 
 console.log(perimeterOfSquare(5));
+
+// Ordenar mediante flechas
+
+let orderList = [5, 7, 1, 9];
+
+orderList.sort((a, b) => a - b);
+console.log(orderList);
+console.clear();
+//---------------Bucles/Loops-------
+
+// For
+for (let i = 0; i <= 10; i++) {
+    console.log(`Indice: ${i}`);
+}
+
+// Definir y rellenar un array con el índice i
+array2 = [];
+
+for (let i = 0; i <= 10; i++) {
+    array2.push(i);
+}
+
+console.log(array2);
+
+// While
+let contador = 0;
+while (contador <= 10) {
+
+    console.log(contador)
+    
+    contador++;
+}
+
+// ForEach
+array3 = [];
+
+for (let i = 0; i <= 10; i++) {
+    array3.push(i * i);
+}
+
+console.log(array3);
+
+array3.forEach(function (value, index) {
+    console.log(`Indice ${index}: ${value}`);
+})
+
+// (side) => side * 4
+
+array3.forEach((value, index) => console.log(`Indicee es: ${index}, valor ${value}`));
+
+// Copiar array
+
+let otherArray = [];
+
+array3.forEach(item => otherArray.push(item))
+
+console.log(`other ${otherArray}`);
+
+console.clear();
+
+// For of
+for(let item of numbersArray) {
+    console.log(item);
+}
+
+// Continue
+for (let i = 0; i < 5; i++) {
+    if (i === 3) {
+        continue; //Salta a la siguiente iteración
+    }
+    console.log("Using continue", i);
+}
+console.clear();
+// Break
+
+// -----------------------------DOM (Document Object Model)----------------
+console.log(document);
+console.log(document.URL);
+console.log(document.title);
+// document.tettle = "Cheatsheet JavaScript (DOM)";
+document.title += " (DOM)";
+console.log(document.title);
+
+// Selectors
+const family = document.getElementsByTagName("div");
+console.log(family);
+
+const grandParent = document.getElementById("grandparent");
+console.log(grandParent);
+
+let element = document.querySelector(".grandparent div");
+console.log(element);
+
+parent1.style.backgroundColor = "#ddd";
