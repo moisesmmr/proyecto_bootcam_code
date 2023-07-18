@@ -385,7 +385,38 @@ console.log(family);
 const grandParent = document.getElementById("grandparent");
 console.log(grandParent);
 
+const children = document.getElementsByClassName("child");
+console.log(children);
+
 let element = document.querySelector(".grandparent div");
 console.log(element);
 
-parent1.style.backgroundColor = "#ddd";
+const changeBackground = (element) => element.style.backgroundColor = "#333";
+
+changeBackground(children[3]);
+changeBackground(parent1);
+children[2].parentNode.parentNode.style.backgroundColor = "xxxxxxxxxxxxx";//parentNode suber un escalon para aplicar
+children[1].textContent; //Coge solo el texto y obvia la etiqueta
+
+// Agregar una clase a un padre 
+console.log("Classlist", parent1.classList);
+parent1.classList.remove(); //Para remover una clase de un padre
+parent1.classList.add("bg-red");//Para agregar una clase a un padre
+parent1.classList.toggle("bg-red");//Hace lo contario, lo pone o lo quita
+parent1.setAttribute("name", "nombre-parent1");//Crea carasteristica y nombre
+
+console.clear();
+// Create / Remuve elements
+let myDiv = document.createElement("div");
+myDiv.id = "new-div";
+myDiv.classList.add("child");
+myDiv.textContent = "child 2.5";
+
+let myDiv2 = myDiv;
+
+parent2.appendChild(myDiv2);
+parent1.appendChild(myDiv);
+
+myDiv2 = myDiv.cloneNode(true);//Creamos un nuevo nodo a partir del original
+parent2.appendChild(myDiv2);
+myDiv2.textContent = "child 5";
