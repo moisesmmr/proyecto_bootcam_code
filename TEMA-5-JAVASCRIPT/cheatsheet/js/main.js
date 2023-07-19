@@ -420,3 +420,9 @@ parent1.appendChild(myDiv);
 myDiv2 = myDiv.cloneNode(true);//Creamos un nuevo nodo a partir del original
 parent2.appendChild(myDiv2);
 myDiv2.textContent = "child 5";
+
+// ---------------------------------Eventos-----------------------
+const colorButton = document.getElementsByTagName("button")[0];
+colorButton.addEventListener("click", funcion(event) {
+    console.log(event);
+});
