@@ -54,4 +54,68 @@ if (month == 6 || month == 7 || month == 8) {
     console.log("Es primavera");
 }
 
+let character = "Black Widow";
+switch (character) {
+    case "Capitan America":
+        power = "Indesctructible shield";    
+        break;
+    case "Black Widow":
+        power = "Master spy & assassin"
+        break;
+    case "Iron Man":
+    power = "Genius-level intellect";
+        break;
+    case "Thor":
+        power = "The hammer of Thoer";
+        break;
+    default:
+        console.log("Choose you hero!");
+}
+console.log(power);
+
+//Ejercicio selector de idiomas
+
+
+// let lenguajeSelected = prompt("Selecciona idioma: español, ingles, aleman o polaco");
+
+// switch (lenguajeSelected) {
+//     case "español":
+//         console.log("Ha seleccionado Español");
+//         break;
+//     case "ingles":
+//         console.log("Lenguaje is English, execute code for English");
+//         break;
+//     case "aleman":
+//         console.log("Ha seleccionado Aleman");
+//         break;
+//     case "polaco":
+//         console.log("Ha seleccionado Polaco");
+//         break;
+//     default:
+//         console.log("Idioma no disponible, seleccione otro idioma");
+        
+//}
+
+//Ejercicio: Escribe un programa que compurebe un numero previamente guardado en una variable,
+//y como resultado nos dia por consola si el numero es menor que 0, si esta entre 0 o10
+//si esta entre 11 y 20, o si es mayor que 20
+
+let secretNumber = 0;
+
+if (secretNumber < 0) {
+    console.log("El numero es menor que 0")
+    }
+
+    else if(secretNumber > -1 && secretNumber <11) {
+        console.log("El numero esta entre 0 y 10")
+    }
+
+    else if(secretNumber > 10 && secretNumber < 21) {
+        console.log("El numero esta entre 10 y 20")
+    }
+
+    else if(secretNumber > 20) 
+    {console.log("El numero es mayor que 20")
+};
+        
 
