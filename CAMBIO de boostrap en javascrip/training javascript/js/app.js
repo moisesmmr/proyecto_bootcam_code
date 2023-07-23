@@ -117,5 +117,13 @@ if (secretNumber < 0) {
     else if(secretNumber > 20) 
     {console.log("El numero es mayor que 20")
 };
-        
+
+let multiplicador = 0;
+let resultado;
+
+while (multiplicador <= 10) {
+    resultado = multiplicador * 2;
+    console.log(multiplicador, "x 2 = ", resultado);
+    multiplicador++;
+}
 
