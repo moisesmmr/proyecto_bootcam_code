@@ -38,40 +38,40 @@
 // let ejercicioTipoyValorJ = !(1 == 1);
 // console.log("J", typeof ejercicioTipoyValorJ, ejercicioTipoyValorJ);
 
-let fecha = new (Date);
-console.log(fecha);
+// let fecha = new (Date);
+// console.log(fecha);
 
-let month = fecha.getMonth();
-console.log(month);
+// let month = fecha.getMonth();
+// console.log(month);
 
-if (month == 6 || month == 7 || month == 8) {
-    console.log("Es verano");
-} else if (month == 9 || month == 10 || month == 11) {
-   console.log("Es otoño");
-} else if ( month == 0 || month == 1 || month == 2) {
-    console.log("Es invierno");
-}  else if ( month == 3 || month == 4 || month == 5) {
-    console.log("Es primavera");
-}
+// if (month == 6 || month == 7 || month == 8) {
+//     console.log("Es verano");
+// } else if (month == 9 || month == 10 || month == 11) {
+//    console.log("Es otoño");
+// } else if ( month == 0 || month == 1 || month == 2) {
+//     console.log("Es invierno");
+// }  else if ( month == 3 || month == 4 || month == 5) {
+//     console.log("Es primavera");
+// }
 
-let character = "Black Widow";
-switch (character) {
-    case "Capitan America":
-        power = "Indesctructible shield";    
-        break;
-    case "Black Widow":
-        power = "Master spy & assassin"
-        break;
-    case "Iron Man":
-    power = "Genius-level intellect";
-        break;
-    case "Thor":
-        power = "The hammer of Thoer";
-        break;
-    default:
-        console.log("Choose you hero!");
-}
-console.log(power);
+// let character = "Black Widow";
+// switch (character) {
+//     case "Capitan America":
+//         power = "Indesctructible shield";    
+//         break;
+//     case "Black Widow":
+//         power = "Master spy & assassin"
+//         break;
+//     case "Iron Man":
+//     power = "Genius-level intellect";
+//         break;
+//     case "Thor":
+//         power = "The hammer of Thoer";
+//         break;
+//     default:
+//         console.log("Choose you hero!");
+// }
+// console.log(power);
 
 //Ejercicio selector de idiomas
 
@@ -100,30 +100,71 @@ console.log(power);
 //y como resultado nos dia por consola si el numero es menor que 0, si esta entre 0 o10
 //si esta entre 11 y 20, o si es mayor que 20
 
-let secretNumber = 0;
+// let secretNumber = 0;
 
-if (secretNumber < 0) {
-    console.log("El numero es menor que 0")
-    }
+// if (secretNumber < 0) {
+//     console.log("El numero es menor que 0")
+//     }
 
-    else if(secretNumber > -1 && secretNumber <11) {
-        console.log("El numero esta entre 0 y 10")
-    }
+//     else if(secretNumber > -1 && secretNumber <11) {
+//         console.log("El numero esta entre 0 y 10")
+//     }
 
-    else if(secretNumber > 10 && secretNumber < 21) {
-        console.log("El numero esta entre 10 y 20")
-    }
+//     else if(secretNumber > 10 && secretNumber < 21) {
+//         console.log("El numero esta entre 10 y 20")
+//     }
 
-    else if(secretNumber > 20) 
-    {console.log("El numero es mayor que 20")
-};
+//     else if(secretNumber > 20) 
+//     {console.log("El numero es mayor que 20")
+// };
 
-let multiplicador = 0;
-let resultado;
+// let multiplicador = 0;
+// let resultado;
 
-while (multiplicador <= 10) {
-    resultado = multiplicador * 2;
-    console.log(multiplicador, "x 2 = ", resultado);
-    multiplicador++;
-}
+// while (multiplicador <= 10) {
+//     resultado = multiplicador * 2;
+//     console.log(multiplicador, "x 2 = ", resultado);
+//     multiplicador++;
+// }
 
+/* Ejercicio crea un objeto llamado shoppingCart. Dentro de este objeto habra una coleccion de al menos 4 productos, que
+a su vez seran objetos. Cada producto debe tener las siguiente propiedades:
+
+* product_id
+* name 
+* price 
+* quentity
+
+A continuacion, mostrar por consola el id y el nombre de cada producto del siguiente modo:**
+> id: 0, name: Nike Air Zoom Pegasus 38
+> id 1, name: Nike ZoomX Vaporfly Next% 2*/
+
+
+let shoppingCart = [
+    product1 = [
+        product_id = 1,
+        name_product = "Nike Air Zoom Pegasus",
+        price = 38,
+        quentity = 20
+    ],
+    product2 = [
+        product_id = 2,
+        name_product = "Nike ZoomX Vaporfly Next%",
+        price = 43,
+        quentity = 2
+    ],
+    product3 = [
+        product_id = 3,
+        name_product = "Nike ZoomZ Air pro",
+        price = 70,
+        quentity = 14
+    ],
+    product4 = [
+        product_id = 4,
+        name_product = "Puma Zoolex Tecno",
+        price = 50,
+        quentity = 33
+    ]
+]
+
+console.log(Array.values(shoppingCart.keys()));

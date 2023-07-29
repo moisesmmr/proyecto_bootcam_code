@@ -99,6 +99,9 @@
 //         console.log("--------------------------------");
 //         break;
 // }
+//En este caso me equivoco en cuando a lo que pedia el ejercicio, dando todos los resultados la estructura switch es
+//totalmente innecesaria y se pierde el objetivo del ejercicio.
+
 
 //Ejercicio 6 Escribe un programa que pida al usuario email y contraseña. Deberá comparar los datos
 //introducidos con los siguientes, que deberán estar guardados en variables:
