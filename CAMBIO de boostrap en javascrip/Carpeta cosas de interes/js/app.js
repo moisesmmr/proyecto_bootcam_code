@@ -27,7 +27,42 @@ function sayHelloName(name, moment) {
     return name.length;
 }
 
-let letters=0;
+let letters = 0;
 
 letters = sayHelloName("Pablo", "Good afternoon");
 console.log(`Your name has ${letters}`);
+
+/*constructor para crear objetos*/
+
+class avengers {
+    constructor(character, name) {  /*construye un objeto con diferentes caracteristicas mediante constructor*/
+        this.character = character;//this se usa para diferenciar la carteristica del objeto del dato que viene del exterior
+        this.name = name;
+        this.powers = [];
+        this.bio = "";
+    }
+    set power(newPower) {
+        this.powers.push(newPower) //Agrega una caracteristica a powers
+    }
+    get power() {
+        console.log(this.powers.join(",")); //obtientes el Arrray powers separado por comas
+    }
+    static avengersBio() {
+        this.bio = `Eartg's mightiest Heroes stan as the planet's fisrt line of defense agains the most powerful threats in the universe.`;
+        console.log(this.bio);
+    }
+}
+
+let ironMan = new avengers("Iron Man", "Tony Stark"); //La propiedad new invoca el construcor de avengers para agregar el nuevo objeto
+ironMan.power = "Fligth"; // invoca la funcion anteriormente crada para agregar valores al apartado powers
+ironMan.power = "Artficial Intelligence";
+ironMan.power; //Muestra en la consola un string con el array de power
+avengers.avengersBio()//Metodo estatico
+
+/* Hay tres formas de almacenar datos dentro de la clase
+las clases siempre empiezan por mayuscula
+
+---Set: Para guardar un valor
+---Get: Para mostrar un valor
+---Static: Para que llamarlo si necesitar el objeto "ironMan.power"*/
+
