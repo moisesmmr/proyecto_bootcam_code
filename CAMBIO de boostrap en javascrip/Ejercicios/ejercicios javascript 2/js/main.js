@@ -259,16 +259,86 @@ do {
     longitud = prompt("Introduce la longitud deseada minimo 8 maximo 16 caracteres");
 } while ((longitud < 8 || longitud > 16) && NaN);
 
+let ramdonPassword = [];
+
 let passContainMinus = false;
-let passContainMayus = false;
+let passContainMayus = true;
 let passContainNumbers = false;
 let passContainSymbols = false;
 
+let arrayMinusculas = [];
+let arrayMayusculas = [];
+let arraySimbolos = [];
+let arrayNumeros = [];
+let arrayUserSelected = [];
 
-/* para el proximo dia preguntar al usuario para que cambie el valor de las variables selectoras
-crear una funcion que mediante las 4 variables selectoras  */
+for (let i = 0; i < 25; i++) { //Array que guarda en decimal los valores ascii mayus
+    arrayMayusculas[i] = 65 + i;
+}
 
-console.log(longitud);
+for (let i = 0; i < 25; i++) { //Array que guarda en decimal los valores ascci minus
+    arrayMinusculas[i] = 97 +i;
+}
 
+for (let i = 0; i < 13; i++) { //Array que guarda en decimal los valores ascci simbolos
+    arraySimbolos[i] = 33 + i;
+}
+
+for (let i = 0; i < 10; i++) { //Array que guarda en decimal los valores ascci numeros 0-9
+    arrayNumeros[i] = 48 + i;
+}
+
+if (prompt("¿Desea que la contraseña contenga numeros?") == "si") {//Ejemplo selector para password
+    passContainNumbers = true;
+}
+
+if (prompt("¿Desea que la contraseña contenga minusculas?") == "si") {//Ejemplo selector para password
+    passContainMinus = true;
+}
+
+if (prompt("¿Desea que la contraseña contenga mayusculas?") == "si") {//Ejemplo selector para password
+    passContainMayus = true;
+}
+
+if (prompt("¿Desea que la contraseña contenga simbolos?") == "si") {//Ejemplo selector para password
+    passContainSymbols = true;
+}
+
+switch (true) { //SIN TERMINAR Este bucle se encargar de agregar los valores seleccionados a un nuevo array
+    case passContainMayus == true:
+        for (let i = 0; i < arrayMayusculas.length; i++) {
+            arrayUserSelected.push(arrayMayusculas[i])
+        }
+    case passContainMinus == true:
+        for (let i = 0; i < arrayMinusculas.length; i++) {
+            arrayUserSelected.push(arrayMinusculas[i])
+        }
+    case passContainNumbers == true:
+        for (let i = 0; i < arrayNumeros.length; i++) {
+            arrayUserSelected.push(arrayNumeros[i])
+        }
+    case passContainSymbols == true:
+        for (let i = 0; i < arraySimbolos.length; i++) {
+            arrayUserSelected.push(arraySimbolos[i])
+        }
+    default:
+        break;
+}
+
+// console.log(String.fromCharCode(arrayMinusculas[1]));//Convierte valor decimal ascii code a valor real minusculas
+
+// console.log(longitud);
+
+// for (let i = 0; i < arrayUserSelected.length; i++) {//comprobar que se guardaron los datos seleccionados
+//     console.log(arrayUserSelected[i]); 
+// }
+
+for (let i = 0; i < longitud; i++) {
+    ramdonPassword.push(arrayUserSelected[Math.floor(Math.random() * arrayUserSelected.length)]);
+}
+
+for (let i = 0; i < longitud; i++) {
+    console.log(String.fromCharCode(ramdonPassword[i]));   
+}
 
 
