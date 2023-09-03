@@ -1,0 +1,53 @@
+@import './reset';
+@import './variables';
+@import './maps';
+@import './functions';
+
+@mixin flexCenter($justify) {
+    //solo css, no permite codigo
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+body {
+    @include flexCenter(flex-end);
+    background-color: $green;
+    width: $full-width;
+    // height: $full-heigth;
+    color: $dark;
+
+    .main {
+        //anidar
+        width: 80%;
+        margin: 2em;
+        border: 1px solid $dark;
+        border-radius: .3rem;
+    }
+
+    &-header {
+        //concatenar
+        font-size: map-get($font-sizes, xxx-large); //Otro archivo scss
+        transition: color .3s ease-in-out;
+        font-weight: titillium('black');
+
+        &:hover {
+            color: $orange;
+        }
+
+        font-family: font-family(titillium);
+    }
+
+    p {
+        color: $fwhite;
+        font-weight: map-get($rubik_font_weigths, 'black');
+        font-size: 1.5rem;
+        font-family: font-family(rubik);
+
+        @for $i from 1 through length($rainbow) {
+            &:nth-child(#{$i + 1}) {    //template literal => #
+                background-color: nth($rainbow, $i);
+            }
+        }
+    }
+}
