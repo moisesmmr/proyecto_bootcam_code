@@ -1,0 +1,16 @@
+
+@function rubik-weight($weigth){
+    @return map-get($rubik_font_weigths, $weigth);
+}
+
+@function titillium-wroght($weigth){
+    @return map-get($titillium_font_weigths, $weigth);
+}
+
+@function font-family($family){
+    @if($family == Rubik){
+        @return 'Rubik', sans-serif;
+    } @else{ 
+        @return 'Titillium Web', sans-serif;
+    }
+}

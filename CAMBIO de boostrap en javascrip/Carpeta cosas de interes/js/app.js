@@ -66,3 +66,10 @@ las clases siempre empiezan por mayuscula
 ---Get: Para mostrar un valor
 ---Static: Para que llamarlo si necesitar el objeto "ironMan.power"*/
 
+//forEach
+
+let arrayNameUser = ["moi", "moi2", "moi3", "moi4",];
+
+arrayNameUser.forEach(name => {
+    console.log(name);
+});

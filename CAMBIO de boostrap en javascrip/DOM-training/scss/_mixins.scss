@@ -1,0 +1,12 @@
+@mixin flexCenter($justify) {
+    //solo css, no permite codigo
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin theme ($ligth-theme: true) {
+    @if ($ligth-theme) {
+        background-color: lighten($bg-color);
+    }
+}
